@@ -2,9 +2,12 @@ import os
 from flask import Flask
 app = Flask(__name__)
 
+hname = os.uname()
+print(hname)
+
 @app.route("/")
 def main():
-    return "Welcome!"
+    return "Welcome! I am host "+ hname +" !!!"
 
 @app.route('/how are you')
 def hello():

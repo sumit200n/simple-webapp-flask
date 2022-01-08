@@ -7,7 +7,8 @@ print(hname)
 
 @app.route("/")
 def main():
-    return ("Welcome! I am host {hname} !!!")
+    hname="Welcome! I am host "+ hname
+    return (hname)
 
 @app.route('/how are you')
 def hello():
